@@ -18,9 +18,9 @@ func StartProxy(port int, config modbus.Settings, readOnly ReadOnlyMode) error {
 		return err
 	}
 
-	if !sponsor.IsAuthorized() {
-		return api.ErrSponsorRequired
-	}
+	//if !sponsor.IsAuthorized() {
+	//	return api.ErrSponsorRequired
+	//}
 
 	h := &handler{
 		log:      util.NewLogger(fmt.Sprintf("proxy-%d", port)),
